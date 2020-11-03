@@ -141,7 +141,7 @@ objects:
         - jenkins
         from:
           kind: ImageStreamTag
-          name: "${NAME}-slave-main:${VERSION}"
+          name: "${NAME}:${VERSION}"
       type: ImageChange
     - type: ConfigChange
 parameters:
