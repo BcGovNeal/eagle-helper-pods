@@ -1,4 +1,4 @@
-FROM bcgov/jenkins-basic:v2-stable
+FROM image-registry.openshift-image-registry.svc:5000/6cdc9e-tools/jenkins-basic:stable
 USER 0
 COPY ./contrib/jenkins/configuration $JENKINS_REF_HOME
 RUN set -x && \
