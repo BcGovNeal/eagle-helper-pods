@@ -2,7 +2,7 @@ FROM image-registry.openshift-image-registry.svc:5000/6cdc9e-tools/jenkins-basic
 USER 0
 COPY ./contrib/jenkins/configuration $JENKINS_REF_HOME
 
-ARG NODE_VERSION=v15.0.1
+ARG NODE_VERSION=v10.16.0
 
 RUN set -x && \
     chgrp -R 0 $JENKINS_REF_HOME && \
