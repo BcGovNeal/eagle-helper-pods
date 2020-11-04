@@ -8,8 +8,7 @@ RUN set -x && \
     chgrp -R 0 $JENKINS_REF_HOME && \
     chmod -R 644 $JENKINS_REF_HOME && \
     chmod -R g+rwX $JENKINS_REF_HOME && \
-    yum install -y python3 && \
-    yum groupinstall -y "Development Tools"
+    yum install -y python3 gcc-c++ make
 
 RUN fix_permission() { while [[ $# > 0 ]] ; do chgrp -R 0 "$1" && chmod -R g=u "$1"; shift; done } && \
     set -x && \
